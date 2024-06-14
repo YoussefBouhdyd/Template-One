@@ -15,6 +15,9 @@
 body {
     font-family: "Work Sans", sans-serif;
 }
+html {
+    scroll-behavior: smooth;
+}
 .container {
     margin-left: auto;
     margin-right: auto;
@@ -385,8 +388,14 @@ body {
     font-weight: bold;
     font-size: 2rem;
     letter-spacing: -.5px;
-    color: darkblue;
+    color: var(--second-color);
     margin: 10px auto;
+}
+
+@media (max-width : 991px) {
+    .contact .contact-content .contact-email p {
+        font-size: 1.5rem;
+    }
 }
 
 .contact .contact-content .contact-email a {
@@ -397,11 +406,44 @@ body {
     color: var(--main-color);
 }
 
+@media (max-width : 991px) {
+    .contact .contact-content .contact-email a  {
+        font-size: 1.1rem;
+    }
+}
+
 .contact .contact-content .contact-social {
     padding: 15px 50px;
 }
 .contact .contact-content .contact-social p {
+    display: inline-block;
     font-size: .9rem;
     text-transform: capitalize;
 }
+
+@media (max-width : 991px) {
+    .contact .contact-content .contact-social p {
+        display: block;
+    }
+}
+
+.contact .contact-content .contact-social i {
+    padding-left: 10px;
+    padding-right: 10px;
+    color: var(--second-color);
+}
 /* End Contact  */
+/* Strat Footer  */
+footer {
+    display: flex;
+    background-color: var(--second-color);
+    color: #fff;
+    font-weight: 800;
+    padding: 40px;
+    justify-content: center;
+    align-items: center;
+}
+footer span {
+    color: var(--main-color);
+}
+/* End Footer  */
